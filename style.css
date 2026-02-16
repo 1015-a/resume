@@ -1,0 +1,401 @@
+/* ฟอนต์ + รีเซ็ต */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* พื้นหลังพาสเทล */
+body{
+    background: #f4f6f9;
+    min-height:100vh;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+    width:90%;
+    margin:20px auto;
+    padding:15px 25px;
+    background: #cde0f4;
+    backdrop-filter: blur(10px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* โลโก้ */
+.logo{
+    font-size:22px;
+    font-weight:700;
+    color:#FFFFFF;
+}
+
+/* เมนู */
+.menu{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:#555;
+    padding:8px 16px;
+    border-radius:20px;
+    transition:0.3s;
+}
+
+/* ปุ่ม active */
+.menu a.active{
+    background:#FFF8DC;
+    color:white;
+    box-shadow:0 4px 10px rgba(255,79,163,0.4);
+}
+
+/* hover เด้งๆ */
+.menu a:hover{
+    background:#FFF8DC;
+    transform:translateY(-3px);
+}
+
+/* hamburger */
+.menu-btn{
+    display:none;
+    font-size:26px;
+    cursor:pointer;
+}
+
+#menu-toggle{
+    display:none;
+}
+
+/* ===== ปุ่มมือถือ ===== */
+.menu-icon{
+    display:none;
+    font-size:26px;
+    cursor:pointer;
+}
+
+#menu-toggle{
+    display:none;
+}
+
+/* ===== มือถือ ===== */
+@media(max-width:768px){
+
+.menu-icon{
+    display:block;
+}
+
+.menu{
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#cde0f4;
+    flex-direction:column;
+    align-items:center;
+    max-height:0;
+    overflow:hidden;
+    transition:0.4s;
+}
+
+.menu li{
+    padding:15px 0;
+}
+
+/* เปิดเมนูเมื่อกด ☰ */
+#menu-toggle:checked ~ .menu{
+    max-height:300px;
+}
+}
+
+/* ===== HERO SECTION ===== */
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:80px 10%;
+    background:#FFFFFF;
+}
+
+/* ข้อความ */
+.hero-text{
+    max-width:500px;
+}
+
+.hero-text h1{
+    font-size:48px;
+    color:#000000;
+}
+
+.hero-text p{
+    margin:20px 0;
+    color:#555;
+    line-height:1.6;
+}
+
+/* ปุ่ม */
+.btn{
+    display:inline-block;
+    background:#F5DEB3;
+    color:white;
+    padding:12px 26px;
+    border-radius:25px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#F5DEB3;
+    transform:translateY(-3px);
+}
+
+/* รูป */
+.hero-img img{
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    margin-bottom:15px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.15);
+    object-fit: cover;
+    
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero-img img{
+    width:260px;
+    margin-top:30px;
+}
+
+.hero-text h1{
+    font-size:36px;
+}
+}
+
+
+/* เปิดเมนู */
+#menu-toggle:checked ~ .menu{
+    max-height:400px;
+}
+
+/* ===== ABOUT CARD STYLE ===== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
+
+
+/* โครงสร้างหลัก */
+.resume{
+    max-width:1000px;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:300px 1fr;
+    background:white;
+    box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* ซ้าย */
+.left{
+    background:#cde0f4;
+    padding:30px;
+}
+
+.profile{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.profile img{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+.role{
+    color:#666;
+}
+
+.section{
+    margin-top:25px;
+}
+
+.section h3{
+    margin-bottom:10px;
+    color:#5a3e3e;
+}
+
+.section ul{
+    list-style:none;
+    line-height:1.9;
+}
+
+.contact {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.contact a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+
+/* ขวา */
+.right{
+    padding:40px;
+}
+
+.right h1{
+    color:#000000;
+    margin-bottom:15px;
+    border-bottom:2px solid #e0cfc8;
+    padding-bottom:6px;
+}
+
+.right p{
+    margin-bottom:20px;
+    line-height:1.7;
+}
+
+.item{
+    margin-bottom:20px;
+}
+
+.item span{
+    color:#777;
+    font-size:14px;
+}
+
+.item ul{
+    margin-top:8px;
+    padding-left:18px;
+}
+
+/* มือถือ */
+@media(max-width:800px){
+    .resume{
+        grid-template-columns:1fr;
+    }
+}
+
+/* ===== Projects Page ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+.projects{
+    padding:60px 10%;
+    text-align:center;
+}
+
+.projects h1{
+    margin-bottom:40px;
+    color:#000000;
+}
+
+/* grid layout */
+.container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap:25px;
+}
+
+/* card */
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+/* image */
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+/* text area */
+.info{
+    padding:20px;
+    text-align:left;
+}
+
+.info h3{
+    margin-bottom:10px;
+}
+
+.social{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.social a{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.fb{background: #cde0f4;}
+.mail{background: #cde0f4;}
+.phone{background:#cde0f4;}
+.github i{background:#cde0f4;}
+
+.item i{
+    font-size:40px;
+    border-radius: 50%;  /* โลโก้ใหญ่ขึ้น */
+}
+
+/* hover effect */
+.social a:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.item{color:#333;}
+
